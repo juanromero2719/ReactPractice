@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import PropTypes from "prop-types";
 
 export const HelloWorldApp = () => {
     return (<h1>Hello World!</h1>);
@@ -13,7 +13,7 @@ export const HelloWorldApp = () => {
 //     );
 // }
 
-const nombre = 'Sebastian';
+//const nombre = 'Sebastian';
  
 export const FirstApp = ({title, subtitle}) => {
 
@@ -23,5 +23,15 @@ export const FirstApp = ({title, subtitle}) => {
             <p>{subtitle}</p>
         </>
     );
+}
+
+FirstApp.prototype = {
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired
+}
+
+FirstApp.defaultProps = {
+    title: 'No hay titulo',
+    subtitle: 'No hay subtitulo'
 }
  
