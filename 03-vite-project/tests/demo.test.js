@@ -1,7 +1,12 @@
-test('Esta prueba no debe fallar', () => {
 
 
-    if(0===1){
-        throw new Error('No se puede dividir entre 0')
-    }
-} )
+describe('Pruebas en <DemoComponent>', () => {
+    
+    test('Esta prueba no debe fallar', () => {
+
+        const Message1 = 'Hola Mundo';
+        const Message2 = Message1.trim();
+        expect(Message1).toBe(Message2);
+        
+    } )
+})
